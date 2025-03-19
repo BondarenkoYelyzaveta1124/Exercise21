@@ -1,4 +1,4 @@
-﻿/*21.Є дві сукупності цілих додатних чисел. Одна виражає ширини тих прогалин, які дуже
+/*21.Є дві сукупності цілих додатних чисел. Одна виражає ширини тих прогалин, які дуже
 бажано перекрити мостами. Інша виражає довжини тих мостів, котрі можна перевезти
 на потрібне місце й там установити. Кількості чисел в цих двох сукупностях можуть
 бути хоч однаковими, хоч різними. Міст можна встановити через прогалину тоді й
@@ -26,10 +26,10 @@ class Program
 
         Console.Write("Введiть довжини мостiв: ");
         string data = Console.ReadLine();
-        string[] n = data.Split(); 
+        string[] n = data.Split();
         int[] leng = new int[n.Length];
 
-        if (vvod(numbers, parts) && vvod(leng, n)) 
+        if (vvod(numbers, parts) && vvod(leng, n))
         {
             sort(numbers);
             sort(leng);
@@ -40,7 +40,7 @@ class Program
     {
         for (int i = 0; i < parts.Length; i++)
         {
-            if (!int.TryParse(parts[i], out arr[i]))
+            if (!int.TryParse(parts[i], out arr[i]) || arr[i] <= 0)
             {
                 Console.WriteLine("Некоректний ввiд.");
                 return false;
